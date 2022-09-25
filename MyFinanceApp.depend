@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1662493407 source:c:\users\agata\desktop\myfinanceapp\auxiliarymethod.cpp
+
+1662493173 source:c:\users\agata\desktop\myfinanceapp\budgetmanager.cpp
+
+1662493249 source:c:\users\agata\desktop\myfinanceapp\dbfile.cpp
+
+1662493374 source:c:\users\agata\desktop\myfinanceapp\expensefile.cpp
+
+1662493131 source:c:\users\agata\desktop\myfinanceapp\incomefile.cpp
+
+1584209020 source:c:\users\agata\desktop\myfinanceapp\main.cpp
+	<iostream>
+
+1662492920 source:c:\users\agata\desktop\myfinanceapp\myfinance.cpp
+
+1662494829 source:c:\users\agata\desktop\myfinanceapp\user.cpp
+	"User.h"
+
+1662494829 c:\users\agata\desktop\myfinanceapp\user.h
+	<iostream>
+
+1662493274 source:c:\users\agata\desktop\myfinanceapp\userfile.cpp
+
+1662493189 source:c:\users\agata\desktop\myfinanceapp\usermanager.cpp
+
+1662578881 source:c:\users\agata\desktop\myfinanceapp\expense.cpp
+	"Expense.h"
+
+1662578856 c:\users\agata\desktop\myfinanceapp\expense.h
+	<iostream>
+
