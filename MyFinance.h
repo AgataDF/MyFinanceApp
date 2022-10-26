@@ -25,9 +25,13 @@ public:
         delete budgetManager;
         budgetManager = NULL;
     };
-
     void signUpUser();
     void signInUser();
     void signOutUser();
+    void writeAllUsers();
+    void changePassword();
+    char chooseFromMainMenu();
+    char chooseFromUserMenu();
+    bool isUserLoggedIn();
 };
 #endif

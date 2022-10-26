@@ -11,15 +11,15 @@
     </coordinates>
     <panel_attributes>MyFinance
 --
-- userManager : UserManager
-- *budgetManager : BudgetManager
-- INCOME_FILE_NAME : const string
-- EXPENSE_FILE_NAME : const string
+- userManager : UserManager +
+- *budgetManager : BudgetManager +
+- INCOME_FILE_NAME : const string +
+- EXPENSE_FILE_NAME : const string +
 --
-+ MyFinanceApp();
-+ signUpUser(): void
-+ signInUser(): void
-+ signOutUser():void
++ MyFinance(); +
++ signUpUser(): void +
++ signInUser(): void +
++ signOutUser():void +
 + changePassword(): void
 + chooseFromMainMenu(): char
 + chooseFromUserMenu(): char
@@ -112,10 +112,10 @@ bg=black</panel_attributes>
       <x>891</x>
       <y>891</y>
       <w>306</w>
-      <h>36</h>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;20.0;320.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;320.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -210,19 +210,19 @@ bg=black</panel_attributes>
     </coordinates>
     <panel_attributes>UserManager
 --
-- loggedUserId : int
-- users : vector &lt;User&gt;
-- userFile : UserFile
+- loggedUserId : int +
+- users : vector &lt;User&gt; +
+- userFile : UserFile +
 --
 + UserManager (string userFileName)
-+ singUpUser(): void
-- typeNewUserData(): User
-+ signInUser(): int
-+ signOutUser(): void
++ singUpUser(): void +
+- typeNewUserData(): User +
++ signInUser(): int +
++ signOutUser(): void +
 + changeUserPassword(): void
 + isUserSignedIn(): bool
-- getNewUserId () : int
-- ifLoginExists () : bool
+- getNewUserId () : int +
+- ifLoginExists () : bool +
 
 
 </panel_attributes>
@@ -238,8 +238,8 @@ bg=black</panel_attributes>
     </coordinates>
     <panel_attributes>UserFile
 --
-+ UserFile (string userFileName)
-+ addUserToFile (User user) : void
++ UserFile (string userFileName) +
++ addUserToFile (User user) : void +
 + loadUsersFromFile () : vector &lt;User&gt;</panel_attributes>
     <additional_attributes/>
   </element>

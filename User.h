@@ -11,7 +11,7 @@ class User
     string name, surname, login, password;
 
 public:
-    User();
+    //User();
     void setId (int newId);
     void setName (string newName);
     void setSurname (string newSurname);

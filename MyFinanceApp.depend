@@ -30,3 +30,98 @@
 1662578856 c:\users\agata\desktop\myfinanceapp\expense.h
 	<iostream>
 
+1666122213 source:c:\users\agata\desktop\myfinanceapp\myfinanceapp\auxiliarymethod.cpp
+	"AuxiliaryMethod.h"
+
+1662493173 source:c:\users\agata\desktop\myfinanceapp\myfinanceapp\budgetmanager.cpp
+
+1664392005 source:c:\users\agata\desktop\myfinanceapp\myfinanceapp\dbfile.cpp
+	"DBFile.h"
+
+1662578881 source:c:\users\agata\desktop\myfinanceapp\myfinanceapp\expense.cpp
+	"Expense.h"
+
+1662578856 c:\users\agata\desktop\myfinanceapp\myfinanceapp\expense.h
+	<iostream>
+
+1662493374 source:c:\users\agata\desktop\myfinanceapp\myfinanceapp\expensefile.cpp
+
+1662578890 source:c:\users\agata\desktop\myfinanceapp\myfinanceapp\income.cpp
+	"Income.h"
+
+1662578856 c:\users\agata\desktop\myfinanceapp\myfinanceapp\income.h
+	<iostream>
+
+1662493131 source:c:\users\agata\desktop\myfinanceapp\myfinanceapp\incomefile.cpp
+
+1662494829 source:c:\users\agata\desktop\myfinanceapp\myfinanceapp\user.cpp
+	"User.h"
+
+1664390878 c:\users\agata\desktop\myfinanceapp\myfinanceapp\user.h
+	<iostream>
+
+1666556610 source:c:\users\agata\desktop\myfinanceapp\myfinanceapp\userfile.cpp
+	"UserFile.h"
+
+1666813822 source:c:\users\agata\desktop\myfinanceapp\myfinanceapp\main.cpp
+	<iostream>
+	"MyFinance.h"
+
+1665606504 c:\users\agata\desktop\myfinanceapp\myfinanceapp\usermanager.h
+	<iostream>
+	<vector>
+	<windows.h>
+	<fstream>
+	<sstream>
+	"UserFile.h"
+	"User.h"
+
+1666556328 c:\users\agata\desktop\myfinanceapp\myfinanceapp\userfile.h
+	<iostream>
+	<vector>
+	<cstdlib>
+	"DBFile.h"
+	"AuxiliaryMethod.h"
+	"User.h"
+	"Markup.h"
+
+1664392063 c:\users\agata\desktop\myfinanceapp\myfinanceapp\dbfile.h
+	<iostream>
+	<fstream>
+
+1666122213 c:\users\agata\desktop\myfinanceapp\myfinanceapp\auxiliarymethod.h
+	<iostream>
+	<vector>
+	<windows.h>
+	<fstream>
+	<sstream>
+	<algorithm>
+
+1666382541 source:c:\users\agata\desktop\myfinanceapp\myfinanceapp\myfinance.cpp
+	"MyFinance.h"
+
+1665606504 c:\users\agata\desktop\myfinanceapp\myfinanceapp\myfinance.h
+	<iostream>
+	"UserManager.h"
+	"BudgetManager.h"
+
+1663615693 c:\users\agata\desktop\myfinanceapp\myfinanceapp\budgetmanager.h
+	<iostream>
+
+1666382847 source:c:\users\agata\desktop\myfinanceapp\myfinanceapp\usermanager.cpp
+	"UserManager.h"
+
+1303067212 c:\users\agata\desktop\myfinanceapp\myfinanceapp\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
+1303067212 source:c:\users\agata\desktop\myfinanceapp\myfinanceapp\markup.cpp
+	<stdio.h>
+	"Markup.h"
+	<errno.h>
+	<iconv.h>
+	<windows.h>
+	<mbstring.h>
+
