@@ -15,10 +15,16 @@ using namespace std;
 class IncomeFile : public DBFile
 {
     CMarkup xml;
+    int lastIncomeId;
+    int setlastIncomeIdFromFile();
+
 public:
-    IncomeFile(string fileName) : DBFile(fileName){};
-    void addIncomeToFile(Income income);
-    vector <Income> loadIncomeFromFile();
+    IncomeFile(string fileName) : DBFile(fileName){
+    lastIncomeId = setlastIncomeIdFromFile();
+    };
+    void addIncomeToFile(Income inc);
+    vector <Income> loadIncomeFromFile(int currentUserId);
     void saveAllIncomesToFile(vector <Income> &incomes);
+    int getlastIncomeId();
 };
 #endif

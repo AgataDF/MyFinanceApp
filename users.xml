@@ -35,4 +35,11 @@
 <Login>s</Login>
 <Password>s</Password>
 </User>
+<User>
+<UserId>6</UserId>
+<Name>g</Name>
+<Surname>g</Surname>
+<Login>g</Login>
+<Password>rrrrrrrrrrr</Password>
+</User>
 </Users>

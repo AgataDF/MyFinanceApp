@@ -27,7 +27,7 @@ public:
     loggedUserId = 0;
     users = userFile.loadUsersFromFile();
     };
-
+    int getLoggedUserId();
     void signUpUser();
     void signInUser();
     void signOutUser();

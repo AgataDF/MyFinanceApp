@@ -33,5 +33,6 @@ public:
     char chooseFromMainMenu();
     char chooseFromUserMenu();
     bool isUserLoggedIn();
+    void addIncome();
 };
 #endif

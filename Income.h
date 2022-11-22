@@ -12,7 +12,7 @@ class Income
     string item;
 
 public:
-    Income();
+    //Income();
     void setIncomeId (int newId);
     void setUserId (int newId);
     void setIncomeDate (int newDate);

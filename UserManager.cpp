@@ -20,12 +20,12 @@ User UserManager::typeNewUserData()
     string name;
     cout << "Type name: ";
     cin >> name;
-    u.setName(name);
+    u.setName(AuxiliaryMethod::replaceFirstLetterUppercaseTheRestLowercase(name));
 
     string surname;
     cout << "Type surname: ";
     cin >> surname;
-    u.setSurname(surname);
+    u.setSurname(AuxiliaryMethod::replaceFirstLetterUppercaseTheRestLowercase(surname));
 
     string login;
     do
@@ -145,4 +145,9 @@ bool UserManager::isUserLoggedIn()
         return true;
     else
         return false;
+}
+
+int UserManager::getLoggedUserId()
+{
+    return loggedUserId;
 }

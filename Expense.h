@@ -12,7 +12,7 @@ class Expense
     string item;
 
 public:
-    Expense();
+    //Expense();
     void setExpenseId (int newId);
     void setUserId (int newId);
     void setExpenseDate (int newDate);

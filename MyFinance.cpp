@@ -8,6 +8,10 @@ void MyFinance::signUpUser()
 void MyFinance::signInUser()
 {
     userManager.signInUser();
+    if (userManager.isUserLoggedIn())
+    {
+        budgetManager = new BudgetManager(INCOME_FILE_NAME, EXPENSE_FILE_NAME, userManager.getLoggedUserId());
+    }
 }
 
 void MyFinance::signOutUser()
@@ -23,6 +27,12 @@ void MyFinance::writeAllUsers()
 void MyFinance::changePassword()
 {
     userManager.changePassword();
+}
+
+void MyFinance::addIncome()
+{
+
+    budgetManager->addIncome();
 }
 
 char MyFinance::chooseFromMainMenu()
@@ -49,8 +59,8 @@ char MyFinance::chooseFromUserMenu()
     system("cls");
     cout << " >>> USER MENU <<<" << endl;
     cout << "---------------------------" << endl;
-    cout << "1. Add income/ Show all users" << endl;
-    cout << "2. Add expense" << endl;
+    cout << "1. Show all users" << endl; //add income
+    cout << "2. Add income (temp)" << endl; //add expense
     cout << "3. Summary of the current month" << endl;
     cout << "4. Summary of the previous month" << endl;
     cout << "5. Summary of the chosen peroid" << endl;

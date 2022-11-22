@@ -41,7 +41,7 @@ int main()
                 myFinance.writeAllUsers();
                 break;
             case '2':
-                //myFinance.wyszukajAdresatowPoImieniu();
+                myFinance.addIncome();
                 break;
             case '3':
                 //myFinance.wyszukajAdresatowPoNazwisku();
