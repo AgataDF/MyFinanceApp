@@ -21,12 +21,13 @@ public:
      static string convertIntToString(int number);
      static string getTypedLine();
      static string removeDashFromDate (string date);
+     static string addDashesToDate (string date);
      static char getChar();
      static int convertStringToInt(string figure);
      static string convertDoubleToString(double number);
      static double convertStringToDouble(string number);
      static string replaceFirstLetterUppercaseTheRestLowercase(string text);
-     static void commaToDot(string number);
+     static string commaToDot(string number);
      static bool checkDate (string date);
 
 

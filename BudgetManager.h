@@ -7,6 +7,7 @@
 #include <vector>
 #include <cstdlib>
 #include <time.h>
+#include <algorithm>
 
 
 #include "IncomeFile.h"
@@ -24,26 +25,30 @@ class BudgetManager
     IncomeFile incomeFile;
     ExpenseFile expenseFile;
 
-    time_t typePeroid();
+    /*time_t typePeroid();
     time_t setDate();
     bool isDateCorrect();
-    bool fileExist();
-    void sortCashOperationsByDate();
+    bool fileExist();*/
+
+    vector<Income>setTemporaryIncomeVectorCurrentMonth();
+    vector<Expense>setTemporaryExpenseVectorCurrentMonth();
+    vector<Income>setTemporaryIncomeVectorPreviousMonth();
+    vector<Expense>setTemporaryExpenseVectorPreviousMonth();
+    vector<Income>setTemporaryIncomeVectorChosenPeroid(string startDate, string endDate);
+    vector<Expense>setTemporaryExpenseVectorChosenPeroid(string startDate, string endDate);
+    double showIncomes (Income income);
+    double showExpenses (Expense expense);
 
 public:
-    BudgetManager (string incomeFileName, string expenseFileName, int loggedUserId)
-        : incomeFile(incomeFileName), expenseFile (expenseFileName), LOGGED_USER_ID (loggedUserId)
+    BudgetManager (int loggedUserId, string incomeFileName, string expenseFileName)
+        : LOGGED_USER_ID (loggedUserId), incomeFile(incomeFileName), expenseFile (expenseFileName)
         {
             incomes = incomeFile.loadIncomeFromFile(LOGGED_USER_ID);
             expenses = expenseFile.loadExpenseFromFile(LOGGED_USER_ID);
         }
 
     void addIncome();
-    //void loadUserIncomes ();
-    void showIncomes ();
     void addExpense();
-    //void loadUserExpenses ();
-    void showExpenses ();
     void showCurrentMonthBalance();
     void showPreviousMonthBalance();
     void showChosenPeroidBalance();

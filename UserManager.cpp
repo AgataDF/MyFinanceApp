@@ -54,7 +54,7 @@ int UserManager::getNewUserId()
 
 bool UserManager::ifLoginExists(string login)
 {
-    for (int i = 0; i < users.size(); i++)
+    for (unsigned int i = 0; i < users.size(); i++)
     {
         if (users[i].getLogin() == login)
         {
@@ -67,7 +67,7 @@ bool UserManager::ifLoginExists(string login)
 
 void UserManager::writeAllUsers()
 {
-    for (int i = 0; i < users.size(); i++)
+    for (unsigned int i = 0; i < users.size(); i++)
     {
         cout << users[i].getId() << endl;
         cout << users[i].getName() << endl;
@@ -127,7 +127,7 @@ void UserManager::changePassword()
     cout << "Type new password: ";
     newPassword = AuxiliaryMethod::getTypedLine();
 
-    for (int i = 0; i < users.size(); i++)
+    for (unsigned int i = 0; i < users.size(); i++)
     {
         if (users[i].getId() == loggedUserId)
         {

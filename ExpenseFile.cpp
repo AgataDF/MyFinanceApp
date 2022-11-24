@@ -18,6 +18,7 @@ void ExpenseFile::addExpenseToFile(Expense expense) {
     xml.AddElem("Amount", AuxiliaryMethod::convertDoubleToString(expense.getAmount()));
 
     xml.Save(getFileName());
+    lastExpenseId++;
 }
 
 void ExpenseFile::saveAllExpensesToFile(vector <Expense> &expenses) {
@@ -31,7 +32,7 @@ void ExpenseFile::saveAllExpensesToFile(vector <Expense> &expenses) {
         xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
         xml.AddElem("Expenses");
     }
-    for (int i = 0; i < expenses.size(); i++) {
+    for (unsigned int i = 0; i < expenses.size(); i++) {
         xml.IntoElem();
         xml.AddElem("Expense");
         xml.IntoElem();
@@ -88,7 +89,7 @@ vector <Expense> ExpenseFile::loadExpenseFromFile(int currentUserId) {
 }
 
 int ExpenseFile::setlastExpenseIdFromFile() {
-    int expenseId;
+    int expenseId = 0;
     bool fileExists = xml.Load( getFileName() );
 
     if (fileExists) {
@@ -100,7 +101,6 @@ int ExpenseFile::setlastExpenseIdFromFile() {
             expenseId = AuxiliaryMethod::convertStringToInt(xml.GetChildData());
         }
     }
-    else return 0;
     return expenseId;
 }
 

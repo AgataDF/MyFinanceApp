@@ -31,7 +31,7 @@ void UserFile::saveAllUsersToFile(vector <User> &users) {
         xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
         xml.AddElem("Users");
     }
-    for (int i = 0; i < users.size(); i++) {
+    for (unsigned int i = 0; i < users.size(); i++) {
         xml.IntoElem();
         xml.AddElem("User");
         xml.IntoElem();

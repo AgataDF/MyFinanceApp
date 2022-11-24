@@ -18,6 +18,7 @@ void IncomeFile::addIncomeToFile(Income inc) {
     xml.AddElem("Amount", AuxiliaryMethod::convertDoubleToString(inc.getAmount()));
 
     xml.Save(getFileName());
+    lastIncomeId++;
 }
 
 void IncomeFile::saveAllIncomesToFile(vector <Income> &incomes) {
@@ -31,7 +32,7 @@ void IncomeFile::saveAllIncomesToFile(vector <Income> &incomes) {
         xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
         xml.AddElem("Incomes");
     }
-    for (int i = 0; i < incomes.size(); i++) {
+    for (unsigned int i = 0; i < incomes.size(); i++) {
         xml.IntoElem();
         xml.AddElem("Income");
         xml.IntoElem();

@@ -34,5 +34,9 @@ public:
     char chooseFromUserMenu();
     bool isUserLoggedIn();
     void addIncome();
+    void addExpense();
+    void showCurrentMonthBalance();
+    void showPreviousMonthBalance();
+    void showChosenPeroidBalance();
 };
 #endif

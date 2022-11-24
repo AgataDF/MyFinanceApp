@@ -11,6 +11,7 @@ string AuxiliaryMethod::convertIntToString(int number)
 string AuxiliaryMethod::getTypedLine()
 {
     string line = "";
+    cin.sync();
     getline(cin, line);
     return line;
 }
@@ -22,6 +23,7 @@ char AuxiliaryMethod::getChar()
 
     while (true)
     {
+        cin.sync();
         getline(cin, line);
 
         if (line.length() == 1)
@@ -64,23 +66,25 @@ string AuxiliaryMethod::replaceFirstLetterUppercaseTheRestLowercase(string text)
     return text;
 }
 
-void AuxiliaryMethod::commaToDot(string number)
+string AuxiliaryMethod::commaToDot(string number)
 {
-    //number.replace(number.begin(), number.end(), '.', ',');
-    for (int i=0; i<number.length(); i++)
-    {
-        if (number[i] == ',')
-        {
-            number[i] = '.';
-            break;
-        }
-    }
+    replace(number.begin(), number.end(), ',', '.');
+    return number;
 }
 
 string AuxiliaryMethod::removeDashFromDate (string date)
 {
     date.erase(remove(date.begin(), date.end(), '-'), date.end());
     return date;
+}
+
+string AuxiliaryMethod::addDashesToDate (string date)
+{
+    string yearDate = date.substr(0, 4);
+    string monthDate = date.substr(4, 2);
+    string dayDate = date.substr(6, 2);
+    string dash = "-";
+    return yearDate+dash+monthDate+dash+dayDate;
 }
 
 bool AuxiliaryMethod:: checkDate (string date)
@@ -92,11 +96,7 @@ bool AuxiliaryMethod:: checkDate (string date)
             return true;
         }
     }
-    else
-    {
-        return false;
-    }
-
+ return false;
 }
 
 bool AuxiliaryMethod:: checkYear (string date)
@@ -163,52 +163,43 @@ bool AuxiliaryMethod:: checkDay (string date)
 
     if (yearDate != yearNow)
     {
-        if(convertStringToInt(monthDate)==1 || convertStringToInt(monthDate)==3 || convertStringToInt(monthDate)==5 || convertStringToInt(monthDate)==7 || convertStringToInt(monthDate)==8 || convertStringToInt(monthDate)==10 || convertStringToInt(monthDate)==12)
+    switch (convertStringToInt(monthDate))
+        {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
         {
             if(convertStringToInt(dayDate)>=1 && convertStringToInt(dayDate)<=31)
                 return true;
-            else
-                return false;
         }
-        else if (convertStringToInt(monthDate)==4 || convertStringToInt(monthDate)==6 || convertStringToInt(monthDate)==9 || convertStringToInt(monthDate)==11)
+        case 4: case 6: case 9: case 11:
         {
             if(convertStringToInt(dayDate)>=1 && convertStringToInt(dayDate)<=30)
                 return true;
-            else
-                return false;
         }
-        else if (convertStringToInt(monthDate)==2)
+        case 2:
         {
             if((convertStringToInt(yearDate)%4==0 && convertStringToInt(yearDate)%100!=0) || convertStringToInt(yearDate)%400==0)
             {
                 if(convertStringToInt(dayDate)>=1 && convertStringToInt(dayDate)<=29)
                 return true;
-                else
-                return false;
             }
             else
             {
                 if(convertStringToInt(dayDate)>=1 && convertStringToInt(dayDate)<=28)
                 return true;
-                else
-                return false;
             }
+        }
         }
     }
     else
     {
         switch (convertStringToInt(monthDate))
         {
-        case 1:
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
             if ((convertStringToInt(monthDate)) <= (convertStringToInt(monthNow)))
             {
                 if(convertStringToInt(dayDate)>=1 && convertStringToInt(dayDate)<=31)
                 return true;
-                else
-                return false;
             }
-            else
-                return false;
         case 2:
             if ((convertStringToInt(monthDate)) <= (convertStringToInt(monthNow)))
             {
@@ -216,121 +207,24 @@ bool AuxiliaryMethod:: checkDay (string date)
                 {
                     if(convertStringToInt(dayDate)>=1 && convertStringToInt(dayDate)<=29)
                     return true;
-                    else
-                    return false;
                 }
                 else
                 {
                     if(convertStringToInt(dayDate)>=1 && convertStringToInt(dayDate)<=28)
                     return true;
-                    else
-                    return false;
                 }
             }
-            else
-                return false;
-        case 3:
-            if ((convertStringToInt(monthDate)) <= (convertStringToInt(monthNow)))
-            {
-                if(convertStringToInt(dayDate)>=1 && convertStringToInt(dayDate)<=31)
-                return true;
-                else
-                return false;
-            }
-            else
-                return false;
-        case 4:
+        case 4: case 6: case 9: case 11:
             if ((convertStringToInt(monthDate)) <= (convertStringToInt(monthNow)))
             {
                 if(convertStringToInt(dayDate)>=1 && convertStringToInt(dayDate)<=30)
                 return true;
-                else
-                return false;
-            }
-            else
-                return false;
-        case 5:
-            if ((convertStringToInt(monthDate)) <= (convertStringToInt(monthNow)))
-            {
-                if(convertStringToInt(dayDate)>=1 && convertStringToInt(dayDate)<=31)
-                return true;
-                else
-                return false;
-            }
-            else
-                return false;
-        case 6:
-            if ((convertStringToInt(monthDate)) <= (convertStringToInt(monthNow)))
-            {
-                if(convertStringToInt(dayDate)>=1 && convertStringToInt(dayDate)<=30)
-                return true;
-                else
-                return false;
-            }
-            else
-                return false;
-        case 7:
-            if ((convertStringToInt(monthDate)) <= (convertStringToInt(monthNow)))
-            {
-                if(convertStringToInt(dayDate)>=1 && convertStringToInt(dayDate)<=31)
-                return true;
-                else
-                return false;
-            }
-            else
-                return false;
-        case 8:
-            if ((convertStringToInt(monthDate)) <= (convertStringToInt(monthNow)))
-            {
-                if(convertStringToInt(dayDate)>=1 && convertStringToInt(dayDate)<=31)
-                return true;
-                else
-                return false;
-            }
-            else
-                return false;
-        case 9:
-            if ((convertStringToInt(monthDate)) <= (convertStringToInt(monthNow)))
-            {
-                if(convertStringToInt(dayDate)>=1 && convertStringToInt(dayDate)<=30)
-                return true;
-                else
-                return false;
-            }
-            else
-                return false;
-        case 10:
-            if ((convertStringToInt(monthDate)) <= (convertStringToInt(monthNow)))
-            {
-                if(convertStringToInt(dayDate)>=1 && convertStringToInt(dayDate)<=31)
-                return true;
-                else
-                return false;
-            }
-            else
-                return false;
-        case 11:
-            if ((convertStringToInt(monthDate)) <= (convertStringToInt(monthNow)))
-            {
-                if(convertStringToInt(dayDate)>=1 && convertStringToInt(dayDate)<=30)
-                return true;
-                else
-                return false;
-            }
-            else
-                return false;
-        case 12:
-            if ((convertStringToInt(monthDate)) <= (convertStringToInt(monthNow)))
-            {
-                if(convertStringToInt(dayDate)>=1 && convertStringToInt(dayDate)<=31)
-                return true;
-                else
-                return false;
             }
             else
                 return false;
         }
     }
+    return false;
 }
 
 

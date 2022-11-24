@@ -38,19 +38,19 @@ int main()
             switch (choice)
             {
             case '1':
-                myFinance.writeAllUsers();
-                break;
-            case '2':
                 myFinance.addIncome();
                 break;
+            case '2':
+                myFinance.addExpense();
+                break;
             case '3':
-                //myFinance.wyszukajAdresatowPoNazwisku();
+                myFinance.showCurrentMonthBalance();
                 break;
             case '4':
-                //myFinance.wypiszWszystkichAdresatowZalogowanegoUzytkownika();
+                myFinance.showPreviousMonthBalance();
                 break;
             case '5':
-                //myFinance.usunAdresata();
+                myFinance.showChosenPeroidBalance();
                 break;
             case '6':
                 myFinance.changePassword();
